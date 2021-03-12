@@ -30,7 +30,6 @@ public class OfferItem {
 
     // discount
     private String discountCause;
-
     private BigDecimal discount;
 
     public OfferItem(BigDecimal productPrice, int quantity) {
@@ -78,7 +77,7 @@ public class OfferItem {
     }
 
     public String getProductId() {
-        return product.getProductId();
+        return product.getId();
     }
     @Override
     public int hashCode() {
