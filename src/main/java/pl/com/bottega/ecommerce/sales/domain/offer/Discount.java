@@ -5,22 +5,22 @@ import java.math.BigDecimal;
 public class Discount {
 
     private String cause;
-    private BigDecimal value;
+    private Money value;
 
-    public Discount(String cause, BigDecimal value) {
+    public Discount(BigDecimal value, String cause) {
         this.cause = cause;
-        this.value = value;
+        this.value = new Money(value, cause);
     }
 
-    public Discount() {
-        this.value = BigDecimal.valueOf(0);
+    public Discount(String cause) {
+        this.value = new Money(cause);
     }
 
     public String getCause() {
         return cause;
     }
 
-    public BigDecimal getValue() {
+    public Money getValue() {
         return value;
     }
 }
