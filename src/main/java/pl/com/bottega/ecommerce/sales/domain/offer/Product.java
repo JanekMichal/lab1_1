@@ -7,8 +7,14 @@ public class Product {
     private String productId;
     private String productName;
     private Date productSnapshotDate;
-
     private String productType;
+
+    public Product(String productId, String productName, Date productSnapshotDate, String productType) {
+        this.productId = productId;
+        this.productName = productName;
+        this.productSnapshotDate = productSnapshotDate;
+        this.productType = productType;
+    }
 
     public String getProductName() {
         return productName;
